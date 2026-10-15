@@ -1,0 +1,17 @@
+{
+  "wan_remote": "https://raw.githubusercontent.com/poomshift/comfyui-docker-new/refs/heads/main/model_config_wan22.json",
+  "qwen": {
+    "diffusion_models": [
+      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors"
+    ],
+    "text_encoders": [
+      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors"
+    ],
+    "vae": [
+      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors"
+    ],
+    "loras": [
+      "https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap/resolve/main/bfs_head_v1.1_qwen_2.1.safetensors"
+    ]
+  }
+}

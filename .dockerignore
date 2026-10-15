@@ -1,0 +1,4 @@
+.git
+*.safetensors
+*.onnx
+*.zip

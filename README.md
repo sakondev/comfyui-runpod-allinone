@@ -1,0 +1,4 @@
+# ComfyUI Runpod All-in-One
+GitHub Actions builds and pushes `ghcr.io/OWNER/REPOSITORY:latest` on push to main. Make GHCR package public, then use the container image in Runpod template with port `8188/http`, persistent /workspace, 150GB+ disk (all Wan assets could need more), and RTX 4090 or larger GPU.
+Auto-download Wan 2.2 catalog from supplied poomshift manifest, Qwen Image 2.1, BFS head v1.1. Downloads are resumable; startup is blocked until required downloads finish. Change WAN_MODELS or QWEN_MODELS to false to skip family. Default USE_SAGE_ATTENTION=true only takes effect if SageAttention Python package exists; otherwise fallback to default attention. **SageAttention is not currently installed**, awaiting known-good pinned CUDA/PyTorch matching wheel.
+HIK unspecified, not installed. Custom nodes are curated 8-item subset, not all 30; validate workflow dependencies on GPU. This image is not confirmed working until GitHub Actions and Runpod smoke tests pass.
