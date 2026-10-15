@@ -6,7 +6,7 @@ RUN git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git && pip ins
 RUN pip install --no-deps --find-links https://comfy-org.github.io/wheels/sageattention/ 'sageattention==2.2.0+cu128torch2.8'
 COPY config/ /opt/template/config/
 COPY scripts/ /opt/template/scripts/
-RUN pip install requests && python /opt/template/scripts/install_nodes.py
+RUN python -m pip install 'pip==24.0' requests && python /opt/template/scripts/install_nodes.py
 ENV USE_SAGE_ATTENTION=true MODEL_DOWNLOAD_ON_START=true WAN_MODELS=true QWEN_MODELS=true
 VOLUME ["/workspace"]
 EXPOSE 8188
